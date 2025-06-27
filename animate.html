@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #box {
+            background-color: plum;
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        Am a box
+    </div>
+    <button id="animBtn">Animate</button>
+    <script>
+        $(document).ready(function () {
+            $('#animBtn').click(function () {
+                $('#box').animate({
+                    left: '150px',
+                    fontSize: '40px'
+                });
+
+                $('#box').animate({
+                    top: '150px',
+                    width: '+=200px'
+
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
